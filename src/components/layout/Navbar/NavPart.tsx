@@ -1,6 +1,8 @@
-import { useState, useEffect, useRef } from "react";
-import { Transition, TransitionStatus } from "react-transition-group";
+import { useState } from "react";
+import { Transition } from "react-transition-group";
 import { IoIosArrowUp } from "react-icons/io";
+
+import useSlide from "hooks/useSlide";
 
 type Props = {
   title: string;
@@ -8,42 +10,27 @@ type Props = {
 };
 
 const NavPart = ({ title, children }: Props) => {
-  const [opened, setOpened] = useState(false);
-  const [height, setHeight] = useState(0);
-  const divRef = useRef<HTMLDivElement>(null);
-
-  const transitionStyles: { [key in TransitionStatus]: React.CSSProperties } = {
-    entering: { maxHeight: 0 },
-    entered: { maxHeight: `${height}px`, transition: "max-height 300ms" },
-    exiting: { maxHeight: `${height}px` },
-    exited: { maxHeight: 0, transition: "max-height 300ms" },
-    unmounted: { maxHeight: 0 },
-  };
-
-  useEffect(() => {
-    if (divRef.current) {
-      setHeight(divRef.current.scrollHeight);
-    }
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
+  const [elemRef, transitionStyles] = useSlide();
 
   return (
     <div className="my-8">
       <div
-        className="mb-4 flex cursor-pointer items-center gap-2 text-2xl font-bold"
-        onClick={() => setOpened(!opened)}
+        className="flex cursor-pointer items-center gap-2 text-2xl font-bold"
+        onClick={() => setIsOpen(!isOpen)}
       >
         {title}
         <IoIosArrowUp
           className={`transition-transform duration-300 ${
-            !opened && "rotate-180"
+            !isOpen && "rotate-180"
           }`}
         />
       </div>
-      <Transition in={opened} timeout={300}>
+      <Transition in={isOpen} timeout={150}>
         {(state) => (
           <div
-            ref={divRef}
-            className="overflow-hidden"
+            ref={elemRef}
+            className="overflow-hidden transition-all"
             style={transitionStyles[state]}
           >
             {children}

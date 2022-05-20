@@ -4,14 +4,14 @@ import { BsCpu, BsCast } from "react-icons/bs";
 import Button from "components/shared/Button";
 import ArrowLink from "components/shared/ArrowLink";
 import { ReactComponent as Puzzle } from "assets/puzzle.svg";
-import { ReactComponent as Amazon } from "assets/amazon.svg";
-import { ReactComponent as Netflix } from "assets/netflix.svg";
-import { ReactComponent as Spotify } from "assets/spotify.svg";
-import { ReactComponent as Microsoft } from "assets/microsoft.svg";
-import { ReactComponent as Facebook } from "assets/facebook.svg";
-import { ReactComponent as Yahoo } from "assets/yahoo.svg";
-import { ReactComponent as Office } from "assets/office.svg";
 import { ReactComponent as Working } from "assets/working.svg";
+import { ReactComponent as Office } from "assets/office.svg";
+import { ReactComponent as Amazon } from "assets/companies/amazon.svg";
+import { ReactComponent as Netflix } from "assets/companies/netflix.svg";
+import { ReactComponent as Spotify } from "assets/companies/spotify.svg";
+import { ReactComponent as Microsoft } from "assets/companies/microsoft.svg";
+import { ReactComponent as Facebook } from "assets/companies/facebook.svg";
+import { ReactComponent as Yahoo } from "assets/companies/yahoo.svg";
 import Comments from "./Comments";
 
 const HomePage = () => {

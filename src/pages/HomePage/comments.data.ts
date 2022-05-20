@@ -1,7 +1,7 @@
-import Shamraiz from "assets/shamraizg.png";
-import Dej from "assets/dejm.png";
-import David from "assets/davidt.png";
-import Chris from "assets/chrism.png";
+import Shamraiz from "assets/comments/shamraizg.png";
+import Dej from "assets/comments/dejm.png";
+import David from "assets/comments/davidt.png";
+import Chris from "assets/comments/chrism.png";
 
 const comments = [
   {
