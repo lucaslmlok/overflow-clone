@@ -12,8 +12,8 @@ import { AiOutlineTeam } from "react-icons/ai";
 import { BiLaptop } from "react-icons/bi";
 import { IoIosArrowUp } from "react-icons/io";
 
-import { ReactComponent as Logo } from "../assets/logo.svg";
-import Button from "./Button";
+import { ReactComponent as Logo } from "assets/logo.svg";
+import Button from "components/Button";
 
 type NavItemProps = {
   icon: IconType;

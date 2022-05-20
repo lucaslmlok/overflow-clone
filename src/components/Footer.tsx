@@ -8,9 +8,9 @@ import {
   BsFillSuitHeartFill,
 } from "react-icons/bs";
 
-import Button from "./Button";
-import { ReactComponent as Logo } from "../assets/logo.svg";
-import sitemap from "../constants/sitemap";
+import Button from "components/Button";
+import { ReactComponent as Logo } from "assets/logo.svg";
+import sitemap from "constants/sitemap";
 
 const Sitemap = () => {
   return (

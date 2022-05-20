@@ -5,20 +5,20 @@ import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Button from "./components/Button";
-import ArrowLink from "./components/ArrowLink";
-import { ReactComponent as Puzzle } from "./assets/puzzle.svg";
-import { ReactComponent as Amazon } from "./assets/amazon.svg";
-import { ReactComponent as Netflix } from "./assets/netflix.svg";
-import { ReactComponent as Spotify } from "./assets/spotify.svg";
-import { ReactComponent as Microsoft } from "./assets/microsoft.svg";
-import { ReactComponent as Facebook } from "./assets/facebook.svg";
-import { ReactComponent as Yahoo } from "./assets/yahoo.svg";
-import { ReactComponent as Office } from "./assets/office.svg";
-import { ReactComponent as Working } from "./assets/working.svg";
-import comments from "./constants/comments";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+import Button from "components/Button";
+import ArrowLink from "components/ArrowLink";
+import { ReactComponent as Puzzle } from "assets/puzzle.svg";
+import { ReactComponent as Amazon } from "assets/amazon.svg";
+import { ReactComponent as Netflix } from "assets/netflix.svg";
+import { ReactComponent as Spotify } from "assets/spotify.svg";
+import { ReactComponent as Microsoft } from "assets/microsoft.svg";
+import { ReactComponent as Facebook } from "assets/facebook.svg";
+import { ReactComponent as Yahoo } from "assets/yahoo.svg";
+import { ReactComponent as Office } from "assets/office.svg";
+import { ReactComponent as Working } from "assets/working.svg";
+import comments from "constants/comments";
 
 function App() {
   return (
