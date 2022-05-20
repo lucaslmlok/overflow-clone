@@ -1,4 +1,4 @@
-import sitemap from "./sitemap";
+import sitemap from "./sitemap.data";
 
 const Sitemap = () => {
   return (
