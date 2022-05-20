@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/overflow-clone/static/css/main.88175bb4.css",
+    "main.js": "/overflow-clone/static/js/main.4462f295.js",
+    "static/js/787.96df53d6.chunk.js": "/overflow-clone/static/js/787.96df53d6.chunk.js",
+    "static/media/puzzle.svg": "/overflow-clone/static/media/puzzle.7ca5592b6d735087491597febd89e815.svg",
+    "static/media/working.svg": "/overflow-clone/static/media/working.706655709c371ee83a190124948580e8.svg",
+    "static/media/office.svg": "/overflow-clone/static/media/office.8db1e0f702afb6d0354515def1c3df45.svg",
+    "static/media/dejm.png": "/overflow-clone/static/media/dejm.4721c806dbc05dbcf6fe.png",
+    "static/media/chrism.png": "/overflow-clone/static/media/chrism.1d10691907226dc5d41a.png",
+    "static/media/spotify.svg": "/overflow-clone/static/media/spotify.973a78c532fd6b1d2c202725b6521720.svg",
+    "static/media/microsoft.svg": "/overflow-clone/static/media/microsoft.f9725aefcd2264375907ec50d1d374b0.svg",
+    "static/media/amazon.svg": "/overflow-clone/static/media/amazon.1bf20b34bbe5cac550d09765008c3507.svg",
+    "static/media/logo.svg": "/overflow-clone/static/media/logo.015539a1b1ab2d02a2df836f8d09e1cf.svg",
+    "static/media/facebook.svg": "/overflow-clone/static/media/facebook.05726f9f257fa6fe2f247948e42dc05e.svg",
+    "static/media/yahoo.svg": "/overflow-clone/static/media/yahoo.a0da0a72bba69bfdf35ce742ec039176.svg",
+    "static/media/netflix.svg": "/overflow-clone/static/media/netflix.eb901ec6d1f9092a3aa45c39b2711f6a.svg",
+    "index.html": "/overflow-clone/index.html",
+    "main.88175bb4.css.map": "/overflow-clone/static/css/main.88175bb4.css.map",
+    "main.4462f295.js.map": "/overflow-clone/static/js/main.4462f295.js.map",
+    "787.96df53d6.chunk.js.map": "/overflow-clone/static/js/787.96df53d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88175bb4.css",
+    "static/js/main.4462f295.js"
+  ]
+}
