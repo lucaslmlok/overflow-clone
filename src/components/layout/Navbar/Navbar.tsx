@@ -1,115 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Transition, TransitionStatus } from "react-transition-group";
-import { IconType } from "react-icons";
-import {
-  HiOutlineMenuAlt3,
-  HiOutlinePresentationChartBar,
-} from "react-icons/hi";
+import { useState, useEffect } from "react";
 import { TiFlowChildren, TiFlowSwitch, TiFlowMerge } from "react-icons/ti";
 import { VscGroupByRefType, VscMortarBoard } from "react-icons/vsc";
 import { MdSupportAgent } from "react-icons/md";
 import { AiOutlineTeam } from "react-icons/ai";
 import { BiLaptop } from "react-icons/bi";
-import { IoIosArrowUp } from "react-icons/io";
+import {
+  HiOutlineMenuAlt3,
+  HiOutlinePresentationChartBar,
+} from "react-icons/hi";
 
 import { ReactComponent as Logo } from "assets/logo.svg";
-import Button from "components/Button";
-
-type NavItemProps = {
-  icon: IconType;
-  path: string;
-  title: string;
-  desc?: string;
-};
-
-const NavItem = ({ icon, path, title, desc }: NavItemProps) => {
-  return (
-    <a href={path} className="mb-4 flex items-start gap-3.5">
-      {React.createElement(icon, { className: "mt-1 h-7 w-7 text-primary" })}
-      <div className="flex-1">
-        <h5 className="font-bold">{title}</h5>
-        {desc && <p className="m-0 mt-1 text-sm leading-relaxed">{desc}</p>}
-      </div>
-    </a>
-  );
-};
-
-const NavSmallItem = ({ icon, path, title }: NavItemProps) => {
-  return (
-    <a href={path} className="mb-4 flex items-start gap-3.5">
-      {React.createElement(icon, { className: "h-7 w-7 text-primary" })}
-      <div className="flex-1">
-        <h5>{title}</h5>
-      </div>
-    </a>
-  );
-};
-
-const NavTitle = ({
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLHeadingElement>) => {
-  return (
-    <h4
-      className="my-4 text-sm font-bold uppercase tracking-widest text-gray-400"
-      {...props}
-    >
-      {children}
-    </h4>
-  );
-};
-
-type NavPartProps = {
-  title: string;
-  children: React.ReactNode;
-};
-
-const NavPart = ({ title, children }: NavPartProps) => {
-  const [opened, setOpened] = useState(false);
-  const [height, setHeight] = useState(0);
-  const divRef = useRef<HTMLDivElement>(null);
-
-  const transitionStyles: { [key in TransitionStatus]: React.CSSProperties } = {
-    entering: { maxHeight: 0 },
-    entered: { maxHeight: `${height}px`, transition: "max-height 300ms" },
-    exiting: { maxHeight: `${height}px` },
-    exited: { maxHeight: 0, transition: "max-height 300ms" },
-    unmounted: { maxHeight: 0 },
-  };
-
-  useEffect(() => {
-    if (divRef.current) {
-      setHeight(divRef.current.scrollHeight);
-    }
-  }, []);
-
-  return (
-    <div className="my-8">
-      <div
-        className="mb-4 flex cursor-pointer items-center gap-2 text-2xl font-bold"
-        onClick={() => setOpened(!opened)}
-      >
-        {title}
-        <IoIosArrowUp
-          className={`transition-transform duration-300 ${
-            !opened && "rotate-180"
-          }`}
-        />
-      </div>
-      <Transition in={opened} timeout={300}>
-        {(state) => (
-          <div
-            ref={divRef}
-            className="overflow-hidden"
-            style={transitionStyles[state]}
-          >
-            {children}
-          </div>
-        )}
-      </Transition>
-    </div>
-  );
-};
+import Button from "components/shared/Button";
+import NavPart from "./NavPart";
+import { NavItem, NavSmallItem } from "./NavItem";
+import NavTitle from "./NavTitle";
 
 const Navbar = () => {
   const [opened, setOpened] = useState(true);
@@ -138,6 +42,7 @@ const Navbar = () => {
           )}
         </button>
       </div>
+
       {opened && (
         <div className="container flex min-h-screen flex-col pt-20 pb-7">
           <nav className="flex-1 px-14">
